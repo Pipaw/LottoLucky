@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="title">LottoLucky</string>
+    <string name="app_name">LottoLucky</string>
+    <string name="number1">00</string>
+    <string name="number2">00</string>
+    <string name="number3">00</string>
+    <string name="number4">00</string>
+    <string name="number5">00</string>
+    <string name="number6">00</string>
+    <string name="simulate">Start</string>
+
+</resources>

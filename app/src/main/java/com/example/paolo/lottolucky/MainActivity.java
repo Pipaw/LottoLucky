@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
                 Random random = new Random();
                 int lotterynum[] = new int[6];
                 for (int x = 0; x <= 5; x++){
-                    lotterynum[x] = random.nextInt(41);
+                    lotterynum[x] = random.nextInt(58);
                     while (lotterynum[x] == 0){
-                        lotterynum[x] = random.nextInt(41);
+                        lotterynum[x] = random.nextInt(58);
                     }
                 }
                 textView1.setText(Integer.toString(lotterynum[0]));

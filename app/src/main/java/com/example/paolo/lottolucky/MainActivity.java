@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,11 +27,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Random random = new Random();
                 int lotterynum[] = new int[6];
-                for (int x = 0; x <= 5; x++){
-                    lotterynum[x] = random.nextInt(58);
-                    while (lotterynum[x] == 0){
-                        lotterynum[x] = random.nextInt(58);
+                for (int x = 0; x < 6; x++){
+                    int randomNum = (random.nextInt(58)+ 1);
+                    for(int i = 0; i < x; i++){
+                        if(lotterynum[i] == randomNum){
+                            randomNum = (random.nextInt(58)+ 1);
+                            i = -1;
+                        }
                     }
+                    lotterynum[x] = randomNum;
                 }
                 textView1.setText(Integer.toString(lotterynum[0]));
                 textView2.setText(Integer.toString(lotterynum[1]));
